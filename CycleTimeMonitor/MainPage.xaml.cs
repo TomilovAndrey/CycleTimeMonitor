@@ -13,7 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI;
-using Windows.Devices.Gpio;
+//using Windows.Devices.Gpio;
+//using System.Threading.Tasks;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x419
 namespace CycleTimeMonitor
@@ -23,8 +24,13 @@ namespace CycleTimeMonitor
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        uint number_of_sec;
         int seconds;
-
+          
+        void SetNumOfSec(uint number)
+        {
+            number_of_sec = number;
+        }
         void SetColorMode(char mode)
         {
             switch (mode)
@@ -103,13 +109,19 @@ namespace CycleTimeMonitor
         {
             seconds = sec;
             textSec.Text = (System.String.Format("{0}", seconds));
+
+            for (int i = 0; i < seconds; i++)
+            {
+
+            }        
         }
 
         public MainPage()
         {
             this.InitializeComponent();
-            SetColorMode('B');
-            SetSec(23);
+            //SetColorMode('B');
+            SetSec(13);
+            //Task.Delay(-1).Wait(1000);                   
         }
     }
 }

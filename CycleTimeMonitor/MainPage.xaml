@@ -8,43 +8,14 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="40*" />
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100*" />
             <RowDefinition Height="100" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
-        <Ellipse Name="Ellipse_1"
-                 Grid.Column="0"
-                 Grid.Row="1"
+        <StackPanel Name="Points" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <Ellipse Name="Ellipse_1"
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -54,9 +25,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"
          />
-        <Ellipse Name="Ellipse_2"
-                 Grid.Column="1"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_2"
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -66,9 +35,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_3"
-                 Grid.Column="2"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_3"    
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -78,9 +45,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_4"
-                 Grid.Column="3"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_4"              
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -90,9 +55,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"
         />
-        <Ellipse Name="Ellipse_5"
-                 Grid.Column="4"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_5"             
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -102,9 +65,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_6"
-                 Grid.Column="5"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_6"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -114,9 +75,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_7"
-                 Grid.Column="6"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_7"               
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -126,9 +85,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_8"
-                 Grid.Column="7"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_8"              
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -138,9 +95,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_9"
-                 Grid.Column="8"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_9"                 
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -150,9 +105,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_10"
-                 Grid.Column="9"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_10"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -162,9 +115,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_11"
-                 Grid.Column="10"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_11"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -174,9 +125,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_12"
-                 Grid.Column="11"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_12"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -186,9 +135,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_13"
-                 Grid.Column="12"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_13"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -198,9 +145,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_14"
-                 Grid.Column="13"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_14"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -210,9 +155,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_15"
-                 Grid.Column="14"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_15"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -222,9 +165,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_16"
-                 Grid.Column="15"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_16"                 
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -234,9 +175,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_17"
-                 Grid.Column="16"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_17"               
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -246,9 +185,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_18"
-                 Grid.Column="17"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_18"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -258,9 +195,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_19"
-                 Grid.Column="18"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_19"               
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -270,9 +205,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_20"
-                 Grid.Column="19"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_20"             
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -282,9 +215,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_21"
-                 Grid.Column="20"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_21"              
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -294,9 +225,7 @@
                  StrokeThickness="5"
                  Stroke="DarkGreen"           
          />
-        <Ellipse Name="Ellipse_22"
-                 Grid.Column="21"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_22"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -306,9 +235,7 @@
                  StrokeThickness="5"
                  Stroke="DarkRed"           
          />
-        <Ellipse Name="Ellipse_23"
-                 Grid.Column="22"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_23"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -318,9 +245,7 @@
                  StrokeThickness="5"
                  Stroke="DarkRed"           
          />
-        <Ellipse Name="Ellipse_24"
-                 Grid.Column="23"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_24"
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -330,9 +255,7 @@
                  StrokeThickness="5"
                  Stroke="DarkRed"           
          />
-        <Ellipse Name="Ellipse_25"
-                 Grid.Column="24"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_25"             
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -342,9 +265,7 @@
                  StrokeThickness="5"
                  Stroke="DarkRed"           
          />
-        <Ellipse Name="Ellipse_26"
-                 Grid.Column="25"
-                 Grid.Row="1"
+            <Ellipse Name="Ellipse_26"                
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin ="5,5,5,5"
@@ -354,6 +275,7 @@
                  StrokeThickness="5"
                  Stroke="DarkRed"           
          />
+        </StackPanel>
 
         <TextBlock Name="textSec"
             Grid.Column="3"
