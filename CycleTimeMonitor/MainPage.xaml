@@ -10,34 +10,56 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="100*" />
-            <RowDefinition Height="100" />
+            <RowDefinition Height="150"/>
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
+        <StackPanel Name="ControleButtons" Grid.Row="2" Orientation="Horizontal">
+            
+            <Button Name="Start"
+                Grid.Row="2"
+                Content="Start cycle"
+                Height="Auto"
+                Width="Auto"
+                Margin ="5,5,5,5"
+         />
 
-        <ProgressBar Grid.Row="1" Name="SecProgress" Background="White" Height="50" Foreground="Green" />
+            <Button Name="Settings"
+                Grid.Row="2"
+                Content="Settings"
+                Height="Auto"
+                Width="Auto"
+                Margin ="5,5,5,5"
+         />
 
+            <Button Name="Stop"
+                Grid.Row="2"
+                Content="Stop cycle"
+                Height="Auto"
+                Width="Auto"
+                Margin ="5,5,5,5"
+         />
+           
+        </StackPanel>
 
+        <ProgressBar Grid.Row="1" Name="SecProgress" Background="White" Height="150" Foreground="Green" />
+
+        <TextBlock Name="textFooter"
+            Grid.Row="2"
+            Margin ="5,5,5,5"
+            Text="Cycle-time monitor BR-L2"
+            FontSize="20"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+         />
+        
         <TextBlock Name="textSec"
-            Grid.Column="3"
             Grid.Row="0"
-            Grid.ColumnSpan="20"
             Margin ="5,5,5,5"
             IsColorFontEnabled="True"
             FontSize="500"
             FontStretch="UltraExpanded"
             LineHeight="50"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-         />
-
-        <TextBlock Name="textFooter"
-            Grid.Column="3"
-            Grid.Row="2"
-            Grid.ColumnSpan="20"
-            Margin ="5,5,5,5"
-            Text="Cycle-time monitor BR-L2"
-            FontSize="20"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
          />

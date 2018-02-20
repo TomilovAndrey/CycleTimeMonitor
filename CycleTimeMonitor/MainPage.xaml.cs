@@ -27,6 +27,7 @@ namespace CycleTimeMonitor
     {
         uint number_of_sec;
         int seconds;
+        bool start_flag = false;
 
         SolidColorBrush red = new SolidColorBrush(Colors.Red);
 
@@ -42,8 +43,7 @@ namespace CycleTimeMonitor
             textSec.Text = (System.String.Format("{0}", seconds));
             SecProgress.Value = seconds;
         }
-
-        async void StartCycle()
+        async void StartCountCycle()
         {
             for (int i=0;i<number_of_sec;i++)
             {
@@ -56,24 +56,37 @@ namespace CycleTimeMonitor
                 await Task.Delay(1000);
             }
         }
+        private void Start_Click(object sender, System.EventArgs e)
+        {
+            start_flag = true;
+        }
+        private void Stop_Click(object sender, System.EventArgs e)
+        {
+            start_flag = false;
+        }
 
         public MainPage()
         {
             this.InitializeComponent();
+
             var gpio = GpioController.GetDefault();
+
             GpioPin pin_start = gpio.OpenPin(5);
-            //GpioPin pin_stop = gpio.OpenPin(6);
+
             pin_start.SetDriveMode(GpioPinDriveMode.Input);
-            //pin_stop.SetDriveMode(GpioPinDriveMode.Input);
+
             SetNumOfSec(26);
             
             while(true)
             {
-               var start_flag = pin_start.Read();
-
-                if (start_flag == GpioPinValue.High)
+                while(start_flag == true)
                 {
-                    StartCycle();
+                    var start_flag = pin_start.Read();
+
+                    if (start_flag == GpioPinValue.High)
+                    {
+                        StartCountCycle();
+                    }
                 }
             }
         }
