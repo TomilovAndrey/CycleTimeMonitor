@@ -13,15 +13,15 @@
             <RowDefinition Height="150"/>
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-
         <StackPanel Name="ControleButtons" Grid.Row="2" Orientation="Horizontal">
-            
+
             <Button Name="Start"
                 Grid.Row="2"
                 Content="Start cycle"
                 Height="Auto"
                 Width="Auto"
                 Margin ="5,5,5,5"
+                Click="Start_Click"
          />
 
             <Button Name="Settings"
@@ -30,6 +30,7 @@
                 Height="Auto"
                 Width="Auto"
                 Margin ="5,5,5,5"
+                Click="Settings_Click"
          />
 
             <Button Name="Stop"
@@ -38,12 +39,11 @@
                 Height="Auto"
                 Width="Auto"
                 Margin ="5,5,5,5"
+                Click="Stop_Click"
          />
-           
+
         </StackPanel>
-
         <ProgressBar Grid.Row="1" Name="SecProgress" Background="White" Height="150" Foreground="Green" />
-
         <TextBlock Name="textFooter"
             Grid.Row="2"
             Margin ="5,5,5,5"
@@ -52,7 +52,6 @@
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
          />
-        
         <TextBlock Name="textSec"
             Grid.Row="0"
             Margin ="5,5,5,5"

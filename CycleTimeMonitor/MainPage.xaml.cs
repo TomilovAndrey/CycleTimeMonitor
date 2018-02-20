@@ -25,26 +25,27 @@ namespace CycleTimeMonitor
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        uint number_of_sec;
+        static int number_of_sec;
         int seconds;
-        bool start_flag = false;
+        bool start_flag;
 
         SolidColorBrush red = new SolidColorBrush(Colors.Red);
 
-        void SetNumOfSec(uint number)
-        {
-            number_of_sec = number;
-            SecProgress.Minimum = 0;
-            SecProgress.Maximum = number_of_sec;
-        }
         void SetSec(int sec)
         {
             seconds = sec;
             textSec.Text = (System.String.Format("{0}", seconds));
             SecProgress.Value = seconds;
         }
+        static public void SetNumOfSec(int number)
+        {
+            number_of_sec = number;
+        }
         async void StartCountCycle()
         {
+            SecProgress.Minimum = 0;
+            SecProgress.Maximum = number_of_sec;
+
             for (int i=0;i<number_of_sec;i++)
             {
                 SetSec(i + 1);
@@ -56,39 +57,24 @@ namespace CycleTimeMonitor
                 await Task.Delay(1000);
             }
         }
-        private void Start_Click(object sender, System.EventArgs e)
+        void Start_Click(object sender, RoutedEventArgs e)
         {
             start_flag = true;
+            StartCountCycle();
         }
-        private void Stop_Click(object sender, System.EventArgs e)
+        void Stop_Click(object sender, RoutedEventArgs e)
         {
             start_flag = false;
+        }
+        void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            Settings settings_win = new CycleTimeMonitor.Settings();
+            settings_win.ShowAsync();
         }
 
         public MainPage()
         {
             this.InitializeComponent();
-
-            var gpio = GpioController.GetDefault();
-
-            GpioPin pin_start = gpio.OpenPin(5);
-
-            pin_start.SetDriveMode(GpioPinDriveMode.Input);
-
-            SetNumOfSec(26);
-            
-            while(true)
-            {
-                while(start_flag == true)
-                {
-                    var start_flag = pin_start.Read();
-
-                    if (start_flag == GpioPinValue.High)
-                    {
-                        StartCountCycle();
-                    }
-                }
-            }
         }
     }
 }
